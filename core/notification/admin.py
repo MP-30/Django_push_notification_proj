@@ -8,4 +8,4 @@ class SecondNotificationForm(forms.Form):
     
 @admin.register(Notification)
 class NotificationAdmin(admin.ModelAdmin):
-    pass
+    add_form_template = "admin/custon_add_form.html"
