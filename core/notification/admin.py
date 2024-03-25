@@ -20,9 +20,9 @@ class NotificationAdmin(admin.ModelAdmin):
                 
                 notification = Notification.objects.create(message = message)
                 
-            else:
-                form = SecondNotificationForm()
-                
-            context = self.get_changeform_initial_data(request)
-            context["form"] = form
-            return super().add_view(request, form_url, extra_context=context)
+        else:
+            form = SecondNotificationForm()
+            
+        context = self.get_changeform_initial_data(request)
+        context["form"] = form
+        return super().add_view(request, form_url, extra_context=context)
